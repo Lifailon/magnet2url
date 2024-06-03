@@ -6,29 +6,41 @@
     <meta http-equiv="refresh" content="0;url=magnet:?xt=urn:btih:ACED2A5FF8B266EF40B76BFCF6B9E76BF19BFD9F">
     -->
     <script>
-        // Функция перенаправления
-        function redirectToMagnet(hashValue) {
-            window.location.href = "magnet:?xt=urn:btih:" + hashValue;
-        }
-        // Перенаправление при загрузке страницы
         window.onload = function() {
-            var hashValue = window.location.hash.substr(1);
+            var hashValue = window.location.hash.substr(1)
+            var messageElement = document.getElementById("message")
             if (hashValue) {
-                redirectToMagnet(hashValue);
+                if (hashValue.startsWith("magnet:?xt=urn:btih:")) {
+                    window.location.href = hashValue
+                }
+                else {
+                    window.location.href = "magnet:?xt=urn:btih:" + hashValue
+                }
             }
-        };
-        // Обновление ссылки и перенаправление при изменении хэша
+            else {
+                messageElement.innerHTML = "For redirect to the default torrent client, pass the info hash or magnet link in the address bar after the # symbol"
+            }
+        }
         window.onhashchange = function() {
-            var hashValue = window.location.hash.substr(1);
-            var redirectLink = document.getElementById('redirectLink');
+            var hashValue = window.location.hash.substr(1)
+            var messageElement = document.getElementById("message")
             if (hashValue) {
-                redirectLink.href = "magnet:?xt=urn:btih:" + hashValue;
-                redirectToMagnet(hashValue);
+                if (hashValue.startsWith("magnet:?xt=urn:btih:")) {
+                    window.location.href = hashValue
+                }
+                else {
+                    window.location.href = "magnet:?xt=urn:btih:" + hashValue
+                }
             }
-        };
+            else {
+                messageElement.innerHTML = "For redirect to the default torrent client, pass the info hash or magnet link in the address bar after the # symbol"
+            }
+        }
     </script>
 </head>
 <body>
-    Если вы не были автоматически перенаправлены, <a id="redirectLink" href="#">нажмите здесь</a>.
+    <div id="message">
+        If you were not automatically redirected, <a id="redirectLink" href="#">click here</a>.
+    </div>
 </body>
 </html>
