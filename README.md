@@ -1,6 +1,6 @@
 ## magnet2url
 
-Convert the transferred info hash torrent or magnet uri to a url address (https format) for redirect to the default torrent client.
+Converts the transferred info hash torrent or magnet uri to a web url address (https) for redirect to the default torrent client.
 
 This approach is used in cases where the magnet link is not perceived as a url for redirection, for example, in the Telegram bot.
 
