@@ -28,10 +28,10 @@ the operating system will redirect you to the default torrent client.
 
 ---
 
-The `&tr` parameter adds a list of torrent tracker servers to the magnet link:
+The `#tr` parameter adds a list of torrent tracker servers to the magnet link:
 
 ```
-https://lifailon.github.io/magnet2url#7395a859e8e590418f422e7d0dfe68860de90631&tr
+https://lifailon.github.io/magnet2url#7395a859e8e590418f422e7d0dfe68860de90631#tr
 ```
 
 redirect to
