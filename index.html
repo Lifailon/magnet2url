@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>magnet2url</title>
+    <!--
+    <meta http-equiv="refresh" content="0;url=magnet:?xt=urn:btih:ACED2A5FF8B266EF40B76BFCF6B9E76BF19BFD9F">
+    -->
+    <script>
+        // Функция перенаправления
+        function redirectToMagnet(hashValue) {
+            window.location.href = "magnet:?xt=urn:btih:" + hashValue;
+        }
+        // Перенаправление при загрузке страницы
+        window.onload = function() {
+            var hashValue = window.location.hash.substr(1);
+            if (hashValue) {
+                redirectToMagnet(hashValue);
+            }
+        };
+        // Обновление ссылки и перенаправление при изменении хэша
+        window.onhashchange = function() {
+            var hashValue = window.location.hash.substr(1);
+            var redirectLink = document.getElementById('redirectLink');
+            if (hashValue) {
+                redirectLink.href = "magnet:?xt=urn:btih:" + hashValue;
+                redirectToMagnet(hashValue);
+            }
+        };
+    </script>
+</head>
+<body>
+    Если вы не были автоматически перенаправлены, <a id="redirectLink" href="#">нажмите здесь</a>.
+</body>
+</html>
