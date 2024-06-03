@@ -4,4 +4,12 @@ Converts the transferred hash torrent file to a url address for redirect to the 
 
 ### Example:
 
-`https://lifailon.github.io/#7395a859e8e590418f422e7d0dfe68860de90631` redirect to `magnet:?xt=urn:btih:7395A859E8E590418F422E7D0DFE68860DE90631`
+```
+https://lifailon.github.io/#7395a859e8e590418f422e7d0dfe68860de90631
+```
+
+redirect to
+
+```
+magnet:?xt=urn:btih:7395A859E8E590418F422E7D0DFE68860DE90631
+```
