@@ -13,7 +13,9 @@
                 else {
                     var magnet = "magnet:?xt=urn:btih:" + hashValue
                     if (magnet.includes("&tr")) {
-                        window.location.href = addTracker(magnet.split('&tr')[0])
+                        magnet = magnet.split('&tr')[0]
+                        var magnetTrackerServerList = addTrackerServerList(magnet)
+                        window.location.href = magnetTrackerServerList
                     }
                     else { 
                         window.location.href = magnet
@@ -24,7 +26,7 @@
                 messageElement.innerHTML = "For redirect to the default torrent client, pass the info hash or magnet link in the address bar after the # symbol"
             }
         }
-        function addTracker(infoHash) {
+        function addTrackerServerList(infoHash) {
             var trackers = [
                 "wss://tracker.btorrent.xyz",
                 "wss://tracker.openwebtorrent.com",
