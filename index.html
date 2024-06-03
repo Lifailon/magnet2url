@@ -12,8 +12,8 @@
                 }
                 else {
                     var magnet = "magnet:?xt=urn:btih:" + hashValue
-                    if (magnet.includes("&tr")) {
-                        magnet = magnet.split('&tr')[0]
+                    if (magnet.includes("#tr")) {
+                        magnet = magnet.split('#tr')[0]
                         var magnetTrackerServerList = addTrackerServerList(magnet)
                         window.location.href = magnetTrackerServerList
                     }
