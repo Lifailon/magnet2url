@@ -2,39 +2,62 @@
 <html>
 <head>
     <title>magnet2url</title>
-    <!--
-    <meta http-equiv="refresh" content="0;url=magnet:?xt=urn:btih:ACED2A5FF8B266EF40B76BFCF6B9E76BF19BFD9F">
-    -->
     <script>
-        window.onload = function() {
-            var hashValue = window.location.hash.substr(1)
+        function magnetRedirec() {
             var messageElement = document.getElementById("message")
+            var hashValue = window.location.hash.substr(1)
             if (hashValue) {
                 if (hashValue.startsWith("magnet:?xt=urn:btih:")) {
                     window.location.href = hashValue
                 }
                 else {
-                    window.location.href = "magnet:?xt=urn:btih:" + hashValue
+                    var magnet = "magnet:?xt=urn:btih:" + hashValue
+                    if (magnet.includes("&tr")) {
+                        window.location.href = addTracker(magnet.split('&tr')[0])
+                    }
+                    else { 
+                        window.location.href = magnet
+                    }
                 }
             }
             else {
                 messageElement.innerHTML = "For redirect to the default torrent client, pass the info hash or magnet link in the address bar after the # symbol"
             }
         }
+        function addTracker(infoHash) {
+            var trackers = [
+                "wss://tracker.btorrent.xyz",
+                "wss://tracker.openwebtorrent.com",
+                "udp://tracker.btorrent.xyz:80",
+                "udp://tracker.openwebtorrent.com:80",
+                "udp://tracker.openwebtorrent.com:1337",
+                "udp://retracker.local:80",
+                "udp://tr0.torrent4me.com:80",
+                "udp://tr1.torrent4me.com:80",
+                "udp://tr2.torrent4me.com:80",
+                "udp://tr3.torrent4me.com:80",
+                "udp://tr4.torrent4me.com:80",
+                "udp://tr0.tor4me.info:80",
+                "udp://tr1.tor4me.info:80",
+                "udp://tr2.tor4me.info:80",
+                "udp://tr3.tor4me.info:80",
+                "udp://tr4.tor4me.info:80",
+                "udp://tr0.tor2me.info:80",
+                "udp://tr1.tor2me.info:80",
+                "udp://tr2.tor2me.info:80",
+                "udp://tr3.tor2me.info:80",
+                "udp://tr4.tor2me.info:80"
+            ]
+            for (var i = 0; i < trackers.length; i++) {
+                infoHash += "&tr=" + encodeURIComponent(trackers[i])
+            }
+            return infoHash
+        }
+        window.onload = function() {
+            magnetRedirec()
+        }
         window.onhashchange = function() {
-            var hashValue = window.location.hash.substr(1)
-            var messageElement = document.getElementById("message")
-            if (hashValue) {
-                if (hashValue.startsWith("magnet:?xt=urn:btih:")) {
-                    window.location.href = hashValue
-                }
-                else {
-                    window.location.href = "magnet:?xt=urn:btih:" + hashValue
-                }
-            }
-            else {
-                messageElement.innerHTML = "For redirect to the default torrent client, pass the info hash or magnet link in the address bar after the # symbol"
-            }
+            magnetRedirec()
         }
     </script>
 </head>
