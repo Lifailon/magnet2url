@@ -5,7 +5,7 @@ Converts the transferred hash torrent file to a url address for redirect to the 
 ### Example:
 
 ```
-https://lifailon.github.io/#7395a859e8e590418f422e7d0dfe68860de90631
+https://lifailon.github.io/magnet2url/#7395a859e8e590418f422e7d0dfe68860de90631
 ```
 
 redirect to
