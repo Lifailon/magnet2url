@@ -7,13 +7,14 @@
             var messageElement = document.getElementById("message")
             var hashValue = window.location.hash.substr(1)
             if (hashValue) {
-                if (hashValue.startsWith("magnet:?xt=urn:btih:")) {
+                if (hashValue.startsWith("magnet:?xt=urn:btih:") || hashValue.startsWith("magnet%3A%3Fxt%3Durn%3Abtih%3A")) {
                     window.location.href = hashValue
                 }
                 else {
                     var magnet = "magnet:?xt=urn:btih:" + hashValue
-                    if (magnet.includes("#tr")) {
-                        magnet = magnet.split('#tr')[0]
+                    if (magnet.includes("&tr") || magnet.includes("%2523")) {
+                        magnet = magnet.split("&tr")[0]
+                        magnet = magnet.split("%2523")[0]
                         var magnetTrackerServerList = addTrackerServerList(magnet)
                         window.location.href = magnetTrackerServerList
                     }
