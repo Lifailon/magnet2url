@@ -28,27 +28,27 @@
         }
         function addTrackerServerList(infoHash) {
             var trackers = [
-                "wss://tracker.btorrent.xyz",
+                "http://tr0.torrent4me.com/ann?uk=kCm7WcIM00",
+                "http://tr1.torrent4me.com/ann?uk=kCm7WcIM00",
+                "http://tr2.torrent4me.com/ann?uk=kCm7WcIM00",
+                "http://tr3.torrent4me.com/ann?uk=kCm7WcIM00",
+                "http://tr4.torrent4me.com/ann?uk=kCm7WcIM00",
+                "http://tr5.torrent4me.com/ann?uk=kCm7WcIM00",
+                "http://tr0.tor4me.info/ann?uk=kCm7WcIM00",
+                "http://tr1.tor4me.info/ann?uk=kCm7WcIM00",
+                "http://tr2.tor4me.info/ann?uk=kCm7WcIM00",
+                "http://tr3.tor4me.info/ann?uk=kCm7WcIM00",
+                "http://tr4.tor4me.info/ann?uk=kCm7WcIM00",
+                "http://tr5.tor4me.info/ann?uk=kCm7WcIM00",
+                "http://tr0.tor2me.info/ann?uk=kCm7WcIM00",
+                "http://tr1.tor2me.info/ann?uk=kCm7WcIM00",
+                "http://tr2.tor2me.info/ann?uk=kCm7WcIM00",
+                "http://tr3.tor2me.info/ann?uk=kCm7WcIM00",
+                "http://tr4.tor2me.info/ann?uk=kCm7WcIM00",
+                "http://tr5.tor2me.info/ann?uk=kCm7WcIM00",
+                "http://retracker.local/announce",
                 "wss://tracker.openwebtorrent.com",
-                "udp://tracker.btorrent.xyz:80",
-                "udp://tracker.openwebtorrent.com:80",
-                "udp://tracker.openwebtorrent.com:1337",
-                "udp://retracker.local:80",
-                "udp://tr0.torrent4me.com:80",
-                "udp://tr1.torrent4me.com:80",
-                "udp://tr2.torrent4me.com:80",
-                "udp://tr3.torrent4me.com:80",
-                "udp://tr4.torrent4me.com:80",
-                "udp://tr0.tor4me.info:80",
-                "udp://tr1.tor4me.info:80",
-                "udp://tr2.tor4me.info:80",
-                "udp://tr3.tor4me.info:80",
-                "udp://tr4.tor4me.info:80",
-                "udp://tr0.tor2me.info:80",
-                "udp://tr1.tor2me.info:80",
-                "udp://tr2.tor2me.info:80",
-                "udp://tr3.tor2me.info:80",
-                "udp://tr4.tor2me.info:80"
+                "wss://tracker.openwebtorrent.com"
             ]
             for (var i = 0; i < trackers.length; i++) {
                 infoHash += "&tr=" + encodeURIComponent(trackers[i])
