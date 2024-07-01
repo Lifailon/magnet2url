@@ -29,13 +29,14 @@
         }
         function addTrackerServerList(infoHash) {
             var trackers = [
+                "wss://tracker.openwebtorrent.com",
                 "udp://tracker.leechers-paradise.org:6969",
                 "udp://tracker.coppersurfer.tk:6969",
                 "udp://tracker.opentrackr.org:1337",
                 "udp://explodie.org:6969",
                 "udp://tracker.empire-js.us:1337",
                 "wss://tracker.btorrent.xyz",
-                "wss://tracker.openwebtorrent.com",
+                "http://retracker.local/announce",
                 "http://tr0.torrent4me.com/ann?uk=kCm7WcIM00",
                 "http://tr1.torrent4me.com/ann?uk=kCm7WcIM00",
                 "http://tr2.torrent4me.com/ann?uk=kCm7WcIM00",
@@ -53,10 +54,7 @@
                 "http://tr2.tor2me.info/ann?uk=kCm7WcIM00",
                 "http://tr3.tor2me.info/ann?uk=kCm7WcIM00",
                 "http://tr4.tor2me.info/ann?uk=kCm7WcIM00",
-                "http://tr5.tor2me.info/ann?uk=kCm7WcIM00",
-                "http://retracker.local/announce",
-                "wss://tracker.openwebtorrent.com",
-                "wss://tracker.openwebtorrent.com"
+                "http://tr5.tor2me.info/ann?uk=kCm7WcIM00"
             ]
             for (var i = 0; i < trackers.length; i++) {
                 infoHash += "&tr=" + encodeURIComponent(trackers[i])
