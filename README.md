@@ -28,7 +28,7 @@ the operating system will redirect you to the default torrent client.
 
 ---
 
-The `#tr` parameter adds a list of torrent tracker servers to the magnet link:
+The `#tr` parameter adds to the magnet link a list of torrent tracker servers used in [WebTorrent](https://github.com/webtorrent/webtorrent-desktop) and the [Kinozal](https://kinozal.tv/) tracker:
 
 ```
 https://lifailon.github.io/magnet2url#7395a859e8e590418f422e7d0dfe68860de90631#tr
@@ -37,5 +37,5 @@ https://lifailon.github.io/magnet2url#7395a859e8e590418f422e7d0dfe68860de90631#t
 redirect to
 
 ```
-magnet:?xt=urn:btih:7395a859e8e590418f422e7d0dfe68860de90631&tr=http://tr0.torrent4me.com/ann?uk=kCm7WcIM00&tr=http://tr1.torrent4me.com/ann?uk=kCm7WcIM00&tr=http://tr2.torrent4me.com/ann?uk=kCm7WcIM00&tr=http://tr3.torrent4me.com/ann?uk=kCm7WcIM00&tr=http://tr4.torrent4me.com/ann?uk=kCm7WcIM00&tr=http://tr5.torrent4me.com/ann?uk=kCm7WcIM00&tr=http://tr0.tor4me.info/ann?uk=kCm7WcIM00&tr=http://tr1.tor4me.info/ann?uk=kCm7WcIM00&tr=http://tr2.tor4me.info/ann?uk=kCm7WcIM00&tr=http://tr3.tor4me.info/ann?uk=kCm7WcIM00&tr=http://tr4.tor4me.info/ann?uk=kCm7WcIM00&tr=http://tr5.tor4me.info/ann?uk=kCm7WcIM00&tr=http://tr0.tor2me.info/ann?uk=kCm7WcIM00&tr=http://tr1.tor2me.info/ann?uk=kCm7WcIM00&tr=http://tr2.tor2me.info/ann?uk=kCm7WcIM00&tr=http://tr3.tor2me.info/ann?uk=kCm7WcIM00&tr=http://tr4.tor2me.info/ann?uk=kCm7WcIM00&tr=http://tr5.tor2me.info/ann?uk=kCm7WcIM00&tr=http://retracker.local/announce&tr=wss://tracker.openwebtorrent.com&tr=wss://tracker.openwebtorrent.com
+Downloading torrent from magnet:?xt=urn:btih:7395a859e8e590418f422e7d0dfe68860de90631&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com&tr=http%3A%2F%2Ftr0.torrent4me.com%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr1.torrent4me.com%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr2.torrent4me.com%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr3.torrent4me.com%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr4.torrent4me.com%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr5.torrent4me.com%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr0.tor4me.info%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr1.tor4me.info%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr2.tor4me.info%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr3.tor4me.info%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr4.tor4me.info%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr5.tor4me.info%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr0.tor2me.info%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr1.tor2me.info%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr2.tor2me.info%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr3.tor2me.info%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr4.tor2me.info%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Ftr5.tor2me.info%2Fann%3Fuk%3DkCm7WcIM00&tr=http%3A%2F%2Fretracker.local%2Fannounce&tr=wss%3A%2F%2Ftracker.openwebtorrent.com&tr=wss%3A%2F%2Ftracker.openwebtorrent.com
 ```
