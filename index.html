@@ -29,14 +29,6 @@
         }
         function addTrackerServerList(infoHash) {
             var trackers = [
-                // WebTorrent
-                "wss://tracker.openwebtorrent.com",
-                "wss://tracker.btorrent.xyz",
-                "udp://tracker.leechers-paradise.org:6969",
-                "udp://tracker.coppersurfer.tk:6969",
-                "udp://tracker.opentrackr.org:1337",
-                "udp://tracker.empire-js.us:1337",
-                "udp://explodie.org:6969",
                 // Retracker
                 "http://retracker.local/announce",
                 // Kinozal
@@ -58,7 +50,7 @@
                 "http://tr3.tor2me.info/ann?uk=kCm7WcIM00",
                 "http://tr4.tor2me.info/ann?uk=kCm7WcIM00",
                 "http://tr5.tor2me.info/ann?uk=kCm7WcIM00",
-                // RuTor
+                // RuTracker
                 "http://bt.t-ru.org/ann",
                 "http://bt2.t-ru.org/ann",
                 "http://bt3.t-ru.org/ann",
@@ -70,12 +62,24 @@
                 "http://bt02.nnm-club.cc:2710/announce",
                 // RuTor
                 "udp://opentor.net:6969",
+                "udp://open.stealth.si:80/announce",
+                "udp://exodus.desync.com:6969/announce",
                 "http://tracker.grepler.com:6969/announce",
                 "udp://tracker.dler.com:6969/announce",
-                "http://h4.trakx.nibba.trade:80/announce",
-                "udp://open.stealth.si:80/announce",
                 "udp://tracker.bitsearch.to:1337/announce",
-                "udp://exodus.desync.com:6969/announce"
+                "http://h1.trakx.nibba.trade:80/announce",
+                "http://h2.trakx.nibba.trade:80/announce",
+                "http://h3.trakx.nibba.trade:80/announce",
+                "http://h4.trakx.nibba.trade:80/announce",
+                "http://h5.trakx.nibba.trade:80/announce",
+                // WebTorrent
+                "wss://tracker.openwebtorrent.com",
+                "wss://tracker.btorrent.xyz",
+                "udp://tracker.leechers-paradise.org:6969",
+                "udp://tracker.coppersurfer.tk:6969",
+                "udp://tracker.opentrackr.org:1337",
+                "udp://tracker.empire-js.us:1337",
+                "udp://explodie.org:6969"
             ]
             for (var i = 0; i < trackers.length; i++) {
                 infoHash += "&tr=" + encodeURIComponent(trackers[i])

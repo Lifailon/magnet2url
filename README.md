@@ -28,7 +28,7 @@ the operating system will redirect you to the default torrent client.
 
 ---
 
-The `#tr` parameter adds to the magnet link a list of torrent tracker servers used in [WebTorrent](https://github.com/webtorrent/webtorrent-desktop), [Kinozal](https://kinozal.tv), [RuTracker](https://rutracker.org), [NoNameClub](https://nnmclub.to) and [RuTor](https://rutor.org/).
+The `#tr` parameter adds to the magnet link a list of torrent tracker servers used in [Kinozal](https://kinozal.tv), [RuTracker](https://rutracker.org), [NoNameClub](https://nnmclub.to), [RuTor](https://rutor.org/) and [WebTorrent](https://github.com/webtorrent/webtorrent-desktop).
 
 ```
 https://lifailon.github.io/magnet2url#7395a859e8e590418f422e7d0dfe68860de90631#tr
